@@ -50,3 +50,21 @@ for i in matrix:
 max_sum = max(index_row_max_arr)
 max_index_sum = index_row_max_arr.index(max_sum)
 print(index_row_max_arr, max_index_sum)
+
+# Найти индекс колонки с максимальной суммой элементов
+
+index_col_max_arr = []
+j = 0
+len_matrix = len(matrix)
+len_of_element = len(matrix[0])
+while j < len_of_element:
+    i = 0
+    sum_of_elements = 0
+    while i < len_matrix:
+        sum_of_elements += matrix[i][j]
+        i += 1
+    index_col_max_arr.append(sum_of_elements)
+    j += 1
+max_col_sum = max(index_col_max_arr)
+max_col_index = index_col_max_arr.index(max_col_sum)
+print(index_col_max_arr, max_col_index)
