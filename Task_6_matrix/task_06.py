@@ -18,3 +18,14 @@ for i in matrix:
         if j > max_el:
             max_el = j
 print(max_el)
+
+# Найти минимальный элемент матрицы
+
+min_el = 0
+
+for i in matrix:
+    for j in i:
+        if j < min_el:
+            min_el = j
+print(min_el)
+
