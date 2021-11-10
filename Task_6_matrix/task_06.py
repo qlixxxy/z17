@@ -29,3 +29,24 @@ for i in matrix:
             min_el = j
 print(min_el)
 
+# Найти сумму всех элементов матрицы
+
+sum = 0
+
+for i in matrix:
+    for j in i:
+        sum += j
+print(sum)
+
+# Найти индекс ряда с максимальной суммой элементов
+
+index_row_max_arr = []
+
+for i in matrix:
+    index_row_sum = 0
+    for j in i:
+        index_row_sum += j
+    index_row_max_arr.append(index_row_sum)
+max_sum = max(index_row_max_arr)
+max_index_sum = index_row_max_arr.index(max_sum)
+print(index_row_max_arr, max_index_sum)
