@@ -68,3 +68,16 @@ while j < len_of_element:
 max_col_sum = max(index_col_max_arr)
 max_col_index = index_col_max_arr.index(max_col_sum)
 print(index_col_max_arr, max_col_index)
+
+# Найти индекс ряда с минимальной суммой элементов
+
+index_row_min_arr = []
+
+for i in matrix:
+    index_row_sum = 0
+    for j in i:
+        index_row_sum += j
+    index_row_min_arr.append(index_row_sum)
+min_sum = min(index_row_min_arr)
+min_index_sum = index_row_min_arr.index(min_sum)
+print(index_row_min_arr, min_index_sum)
