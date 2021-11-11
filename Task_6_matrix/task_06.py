@@ -1,6 +1,7 @@
 # Создать матрицу случайных чисел от a до b, размерность матрицы n*m
 
 from random import randint
+from copy import deepcopy
 
 a = 1
 b = 10
@@ -97,7 +98,7 @@ print(index_col_min_arr, min_col_sum_index)
 
 # Обнулить все элементы выше главной диагонали
 
-new_matrix_zero_above = matrix[:]
+new_matrix_zero_above = deepcopy(matrix)
 starter_point = 1
 for i, k in enumerate(new_matrix_zero_above):
     j = starter_point
@@ -107,3 +108,15 @@ for i, k in enumerate(new_matrix_zero_above):
         j += 1
     starter_point += 1
 print(new_matrix_zero_above)
+
+# Обнулить все элементы ниже главной диагонали
+
+new_matrix_zero_behind = deepcopy(matrix)
+ending_point = 0
+for i, k in enumerate(new_matrix_zero_behind):
+    for j, v in enumerate(k):
+        if j < ending_point:
+            new_matrix_zero_behind[i][j] = 0
+    ending_point += 1
+print(new_matrix_zero_behind)
+
