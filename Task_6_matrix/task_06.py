@@ -2,7 +2,7 @@
 
 from random import randint
 
-a = 0
+a = 1
 b = 10
 n = 5
 m = 5
@@ -94,3 +94,16 @@ for i, k in enumerate(matrix):
 min_col_sum = min(index_col_min_arr)
 min_col_sum_index = index_col_min_arr.index(min_col_sum)
 print(index_col_min_arr, min_col_sum_index)
+
+# Обнулить все элементы выше главной диагонали
+
+new_matrix_zero_above = matrix[:]
+starter_point = 1
+for i, k in enumerate(new_matrix_zero_above):
+    j = starter_point
+    len_of_k = len(k)
+    while j < len_of_k:
+        new_matrix_zero_above[i][j] = 0
+        j += 1
+    starter_point += 1
+print(new_matrix_zero_above)
