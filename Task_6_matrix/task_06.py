@@ -137,3 +137,14 @@ for i, k in enumerate(matrix_a):
     sum_matrix_a_b.append(inner_arr)
 print(sum_matrix_a_b)
 
+# Создать матрицу равную разности matrix_a и matrix_b
+
+diff_matrix_a_b = []
+index_a = 0
+for i, k in enumerate(matrix_a):
+    inner_arr = []
+    for j, r in enumerate(k):
+        diff_of_a_b = matrix_a[i][j] - matrix_b[i][j]
+        inner_arr.append(diff_of_a_b)
+    diff_matrix_a_b.append(inner_arr)
+print(diff_matrix_a_b)
