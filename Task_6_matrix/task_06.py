@@ -124,5 +124,16 @@ print(new_matrix_zero_behind)
 
 matrix_a = [[randint(a, b) for i in range (0, m)] for x in range(0, n)]
 matrix_b = [[randint(a, b) for i in range (0, m)] for x in range(0, n)]
-print(matrix_a)
-print(matrix_b)
+
+# Создать матрицу равную сумме matrix_a и matrix_b
+
+sum_matrix_a_b = []
+index_a = 0
+for i, k in enumerate(matrix_a):
+    inner_arr = []
+    for j, r in enumerate(k):
+        sum_of_a_b = matrix_a[i][j] + matrix_b[i][j]
+        inner_arr.append(sum_of_a_b)
+    sum_matrix_a_b.append(inner_arr)
+print(sum_matrix_a_b)
+
