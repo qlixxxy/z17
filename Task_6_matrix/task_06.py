@@ -120,3 +120,9 @@ for i, k in enumerate(new_matrix_zero_behind):
     ending_point += 1
 print(new_matrix_zero_behind)
 
+# Создать две новые матрицы matrix_a, matrix_b случайных чисел размерностью n*m
+
+matrix_a = [[randint(a, b) for i in range (0, m)] for x in range(0, n)]
+matrix_b = [[randint(a, b) for i in range (0, m)] for x in range(0, n)]
+print(matrix_a)
+print(matrix_b)
