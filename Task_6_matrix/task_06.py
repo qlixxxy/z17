@@ -81,3 +81,16 @@ for i in matrix:
 min_sum = min(index_row_min_arr)
 min_index_sum = index_row_min_arr.index(min_sum)
 print(index_row_min_arr, min_index_sum)
+
+# Найти индекс колонки с минимальной суммой элементов
+
+index_col_min_arr = []
+
+for i, k in enumerate(matrix):
+    min_sum_of_elements = 0
+    for j, r in enumerate(k):
+        min_sum_of_elements += matrix[j][i]
+    index_col_min_arr.append(min_sum_of_elements)
+min_col_sum = min(index_col_min_arr)
+min_col_sum_index = index_col_min_arr.index(min_col_sum)
+print(index_col_min_arr, min_col_sum_index)
