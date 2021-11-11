@@ -146,5 +146,18 @@ for i, k in enumerate(matrix_a):
     for j, r in enumerate(k):
         diff_of_a_b = matrix_a[i][j] - matrix_b[i][j]
         inner_arr.append(diff_of_a_b)
-    diff_matrix_a_b.append(inner_arr)
+    diff_matrix_a_b.append(inner_arr)    
 print(diff_matrix_a_b)
+
+# Создать новую матрицу равную matrix_a умноженной на g. g вводится с клавиатура
+
+g = int(input('Введите g'))
+multiply_matrix_a_g = []
+index_a = 0
+for i, k in enumerate(matrix_a):
+    inner_arr = []
+    for j, r in enumerate(k):
+        multiply_a_g = matrix_a[i][j] * g
+        inner_arr.append(multiply_a_g)
+    multiply_matrix_a_g.append(inner_arr)
+print(multiply_matrix_a_g)
