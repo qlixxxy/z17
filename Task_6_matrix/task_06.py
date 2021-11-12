@@ -109,6 +109,20 @@ for i, k in enumerate(new_matrix_zero_above):
     starter_point += 1
 print(new_matrix_zero_above)
 
+# Обнулить все элементы выше главной диагонали (while)
+
+new_matrix_zero_behind_while = deepcopy(matrix)
+i = 0
+j = 1
+len_of_matrix_zero_behind_while = len(new_matrix_zero_behind_while)
+while i < len_of_matrix_zero_behind_while:
+    while j < len_of_matrix_zero_behind_while:
+        new_matrix_zero_behind_while[i][j] = 0
+        j += 1
+    i += 1
+    j = i + 1
+print(new_matrix_zero_behind_while)
+
 # Обнулить все элементы ниже главной диагонали
 
 new_matrix_zero_behind = deepcopy(matrix)
@@ -119,6 +133,19 @@ for i, k in enumerate(new_matrix_zero_behind):
             new_matrix_zero_behind[i][j] = 0
     ending_point += 1
 print(new_matrix_zero_behind)
+
+# Обнулить все элементы ниже главной (while)
+
+new_matrix_zero_above_while = deepcopy(matrix)
+i = 1
+len_of_while_matrix = len(new_matrix_zero_above_while)
+while i < len_of_while_matrix:
+    j = 0
+    while j < i:
+        new_matrix_zero_above_while[i][j] = 0
+        j += 1
+    i += 1
+print(new_matrix_zero_above_while)
 
 # Создать две новые матрицы matrix_a, matrix_b случайных чисел размерностью n*m
 
